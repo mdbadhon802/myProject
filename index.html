@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/68152c3809.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Manrope:wght@500&family=Open+Sans:wght@300;500&family=Plus+Jakarta+Sans:wght@500&family=Poppins:wght@400;500;700&family=Work+Sans:wght@400;500&display=swap');
+      </style>
+    <title>Document</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#6677FF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50">
+    <header>
+        <nav>
+            <div class="lg:ml-64 flex justify-between md:ml-72 md:justify-between lg:justify-between bg-white pb-4">
+                <div>
+                    <div class="pl-4 pt-4">
+                        <h1 class="font-semibold text-3xl">Home</h1>
+                    </div>
+                </div>
+                <div class="flex lg:mr-5">
+                    <img class="w-10 mr-3 mt-4" src="images/admin.png" alt="">
+                    <div class="mt-4 mr-4">
+                        <h3 class="font-semibold text-base	">Warren Hill</h3>
+                        <p>Super Admin</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
+                aria-controls="sidebar-multi-level-sidebar" type="button"
+                class="inline-flex items-center p-2 mt-2 ml-3 text-sm md:hidden w-10 h-10 hover:bg-gray-300 hover:text-blue-500 rounded-lg">
+                <span class="sr-only">Open sidebar</span>
+                <i class="fa-solid fa-bars fa-2xl"></i>
+            </button>
+
+            <aside id="sidebar-multi-level-sidebar"
+                class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+                aria-label="Sidebar">
+                <div>
+                    <a href=""><img class="" src="images/main-icon.png" alt=""></a>
+                </div>
+                <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 text-black">
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-base font-normal bg-violet-100 py-3 border-3 rounded-sm ">
+                                <i class="fa-solid fa-house" style="color: #1e70c2;"></i>
+                                <span class="ml-3 text-blue-500"></i>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center p-2 text-base font-normal hover:text-blue-500">
+                                <i class="fa-solid fa-user-plus"></i>
+                                <span class="flex-1 ml-3 whitespace-nowrap"> Cobrar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base font-normal  transition duration-75 rounded-lg group hover:text-blue-500"
+                                aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                                <i class="fa-regular fa-file-lines hover:text-blue-500"></i>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap "
+                                    sidebar-toggle-item>Ofertas</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center w-full p-2 text-base font-normal  transition duration-75 rounded-lg pl-11 group  hover:text-blue-500">Aceitos</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center w-full p-2 text-base font-normal  transition duration-75 rounded-lg pl-11 group  hover:text-blue-500">Pendentes</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-base font-normal  rounded-lg hover:text-blue-500">
+                                <i class="fa-solid fa-heart-circle-bolt"></i>
+                                <span class="flex-1 ml-3 whitespace-nowrap ">Pagos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-base font-normal rounded-lg hover:text-blue-500">
+                                <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
+                                <span class="flex-1 ml-3 whitespace-nowrap ">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </section>
+        
+        <section>
+            
+            <div class="overflow-x-auto lg:mt-8 lg:ml-72 md:ml-72 text-left  mt-5 bg-white px-5  py-5 rounded-lg">
+                <div class="flex justify-between lg:mr-36 md:mr-40">
+                    <div>
+                        <h1 id="User-managemnet" class="text-xl font-semibold pl-4 mb-6">User Management</h1>
+                         <input class="w-96 rounded-lg bg-slate-200  border-0 mb-6" type="search" name="" id="" placeholder="&#xf002; Search">
+                    </div>
+                    <div>
+                        <h2 class=" bg-slate-200 w-20 h-10 pt-2 pl-2 rounded-md font-semibold text-base ">Sort <i class="fa-solid fa-arrow-down-wide-short pl-2"></i></h2>
+                    </div>
+                </div>
+                <table class="w-full">
+                  <thead>
+                    <tr>
+                      <th>CNPJ</th> 
+                      <th>E-Mail</th> 
+                      <th>Apuracao</th> 
+                      <th>Valor</th> 
+                      <th>Action</th> 
+                    </tr>
+                  </thead> 
+                  <tbody>
+                    <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>89.904.371/0001-30</td> 
+                        <td>eusourosi@yeahoo.com</td> 
+                        <td>18 de setembro de 2023 </td> 
+                        <td>R$ 15.331,41</td> 
+                        <td>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                          <button class="w-10 h-10 bg-slate-200 rounded-md">
+                              <i class="fa-regular fa-trash-can" style="color: #e63205;"></i>
+                          </button>
+                        </td>
+                      </tr>
+                  </tbody> 
+                </table>
+              </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    
+</body>
+
+</html>
